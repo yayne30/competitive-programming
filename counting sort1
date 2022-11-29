@@ -1,0 +1,12 @@
+ public static List<Integer> countingSort(List<Integer> arr) {    
+            int[] freq=new int[100];
+             List<Integer> list=new ArrayList<>();
+        System.out.println(freq.length);
+             for(int h:arr){
+                 freq[h]++;}
+            for(int i:freq){
+                list.add(i);
+            }
+             return list;
+
+    }
