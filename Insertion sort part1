@@ -1,0 +1,18 @@
+ public static void insertionSort1(int n, List<Integer> arr) {
+        int unsorted=arr.get(n-1),i=n-2,j=n-1;
+        while(j>-1){
+            if(i==-1&&j==0){
+                arr.set(0,unsorted);
+            j=-1;}
+            else if(arr.get(i)>unsorted){
+                arr.set(j,arr.get(i));
+                j--;
+                 i--;}
+            else{
+                arr.set(j,unsorted);
+                j=-1;
+            }
+            for(int m: arr){
+                System.out.print(m+ " ");}
+            System.out.println();}
+    }
