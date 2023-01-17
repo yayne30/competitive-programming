@@ -1,0 +1,24 @@
+class Solution {
+    public int carFleet(int target, int[] position, int[] speed) {
+
+        int count=0;
+        double[] timearr=new double[target];
+        for(int i=0;i<position.length;i++){
+            timearr[position[i]]=(double)(target-position[i])/speed[i];
+        }
+        double prev=0.0;
+        for(int j=timearr.length-1;j>=0;j--){
+             if(timearr[j]>prev){
+                 prev=timearr[j];
+                 count++;
+             }
+
+        }
+      return count;
+
+
+
+
+
+    }
+}
