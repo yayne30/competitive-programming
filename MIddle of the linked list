@@ -1,0 +1,17 @@
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        ListNode temp=head,temp1=head;
+        int no_elm=1,mid,i=1;
+          while(temp.next!=null){
+                 temp=temp.next;
+                  no_elm++;  }
+          if(no_elm%2==0){
+             mid=(no_elm/2)+1; }
+          else {mid=(no_elm+1)/2;}
+          while(i<mid){
+              temp1=temp1.next;
+              i++;
+          }
+          return temp1;
+    }
+}
