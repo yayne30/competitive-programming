@@ -1,0 +1,22 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int[] ans=new int[nums.length];
+        int j=0,k=nums.length-1;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=0){
+                ans[j]=nums[i];
+                j++;
+            }
+            else{
+                ans[k]=0;
+                k--;
+            }
+        }
+        for(int t=0;t<nums.length;t++){
+            nums[t]=ans[t];
+        }
+        
+        System.out.println(Arrays.toString(nums));
+
+    }
+}
